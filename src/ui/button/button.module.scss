@@ -5,18 +5,32 @@
   align-items: center;
   justify-content: center;
   padding: 8px 15px;
-  border-radius: 6px;
-
+  
   font-size: 14px;
   font-family: itdeltaFontMedium;
-
+  
   gap: 10px;
   background-color: white;
+  border-radius: 6px;
   border: 1px solid var(--border-color);
 }
 
-.container:hover {
+.container:hover:not(.disabled) {
   background-color: rgb(123, 211, 238);
   transition: 0.3s all;
   cursor: pointer;
 }
+
+.primary {
+  background-color: var(--btn-color);
+  color: white;
+  font-family: itdeltaFontMedium;
+  font-weight: 500;
+}
+
+.disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+

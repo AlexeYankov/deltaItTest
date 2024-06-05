@@ -19,10 +19,10 @@ export const Provider = ({
     () =>
       new QueryClient({
         defaultOptions: {
-          queries: {
-            staleTime: 10 * 1000,
-            refetchInterval: 10 * 1000,
-          },
+          // queries: {
+          //   staleTime: 10 * 1000,
+          //   refetchInterval: 10 * 1000,
+          // },
         },
       })
   );

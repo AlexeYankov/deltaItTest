@@ -1,0 +1,37 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  height: 90px;
+  width: 100%;
+  padding-bottom: 36px;
+
+  .label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: itdeltaFontMedium;
+
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .description {
+    position: absolute;
+    left: 0;
+    top: 90%;
+
+    font-family: itdeltaFontMedium;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(107, 114, 128);
+  }
+
+  .textArea {
+    width: 100%;
+    position: relative;
+    top: 20px;
+    border-radius: 6px;
+    padding: 10px 15px;
+
+    border: 1px solid var(--border-color);
+  }
+}

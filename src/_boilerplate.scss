@@ -49,12 +49,13 @@ html {
     font-family: var(--font-family-primary), sans-serif;
     line-height: var(--line-height-m);
     color: var(--color-light-100);
-    overflow: hidden;
+    overflow-y: scroll;
    
     background-color: var(--color-dark-900);
   }
 
   :root {
     --border-color: #D1D5DB;
+    --btn-color: rgb(79, 70, 229);
   
   }

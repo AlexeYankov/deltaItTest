@@ -1,17 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
 import { instance } from './baseApi';
-import { GetImagesType } from './types';
+import { GetImagesCommentType, GetImagesType } from './types';
 
 const imagesApi = {
   getImages() {
     return instance.get<Array<GetImagesType>>('/images');
   },
   getImageContent(id: string) {
-    return instance.get<GetImagesType>(`/image/` + `${id}`);
+    return instance.get<GetImagesCommentType>(`/image/` + `${id}`);
   }, 
   sendComment(id: string, data: string) {
-    console.log(data)
-    return instance.post<GetImagesType>(`/image/` + `${id}` + '/comments', data);
+    return instance.post<GetImagesType>(`/image/` + `${id}` + '/comments', {comment: data});
   },
 };
 
@@ -22,10 +21,20 @@ const useGetImages = () => {
         await imagesApi.getImages().then((res) => {
           return res.data;
         }),
-        // }), enabled: false
+    });
+    
+  
+};
+const useGetImageContent = (id: string) => {
+    return useQuery({
+      queryKey: ['image'],
+      queryFn: async () =>
+        await imagesApi.getImageContent(id).then((res) => {
+          return res.data;
+        }),
     });
     
   
 };
 
-export { useGetImages, imagesApi };
+export { useGetImages, useGetImageContent, imagesApi };
