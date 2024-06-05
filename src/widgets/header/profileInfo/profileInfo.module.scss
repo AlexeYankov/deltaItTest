@@ -1,0 +1,58 @@
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 32px;
+  padding-top: 192px;
+
+  .avatar_container {
+    gap: 20px;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .profile__data_container {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    width: 100%;
+
+    font-size: 24px;
+    line-height: 32px;
+    font-family: itdeltaFontBold;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    gap: 75px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding-top: 249px;
+    flex-wrap: wrap;
+
+    .buttonWrapper {
+      padding-top: 20px;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+    padding-top: 249px;
+    .profile__data_container {
+      font-size: 20px;
+    }
+
+    .avatar_container {
+      gap: 5px;
+    }
+  }
+}
