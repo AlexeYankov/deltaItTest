@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 0 32px;
+  padding-top: 115px;
+
+  display: inline-grid;
+  grid-template-columns: repeat(3, 4fr);
+  max-width: 1358px;
+  width: 100%;
+
+  gap: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+    padding-top: 150px;
+    grid-template-columns: repeat(2, 6fr);
+  }
+}
+
+@media screen and (max-width: 521px) {
+  .wrapper {
+    grid-template-columns: auto;
+  }
+}

@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: 216px;
+    gap: 10px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    cursor: pointer;
+    
+    img {
+        border-radius: 8px;
+        max-height: 216px;
+        object-fit: cover;
+    }
+}
